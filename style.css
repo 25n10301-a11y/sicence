@@ -1,0 +1,58 @@
+:root {
+  --navy: #101b2b; --navy2: #17263a; --gold: #c5a66b;
+  --cream: #eee9df; --muted: #aab2bc; --line: rgba(197,166,107,.28);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--navy); color: var(--cream); font-family: "Noto Sans KR", "Malgun Gothic", sans-serif; line-height: 1.7; }
+a { color: inherit; text-decoration: none; }
+.site-header { height: 76px; padding: 0 8%; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+.brand { font-family: Georgia, serif; letter-spacing: 2px; font-size: 17px; color:var(--gold); }
+.brand span { color:var(--cream); font-size:12px; margin-left:5px; }
+nav { display:flex; gap:32px; color:#d7d2c8; font-size:14px; }
+nav a:hover { color:var(--gold); }
+.hero { min-height: 520px; padding: 105px 12% 90px; position:relative; overflow:hidden; background: radial-gradient(ellipse at 80% 48%, #26374b 0%, var(--navy) 58%); }
+.eyebrow { color:var(--gold); letter-spacing:3px; font: 11px Georgia, serif; }
+.hero h1 { font-size: clamp(38px, 5vw, 62px); line-height:1.3; font-weight:500; letter-spacing:-2px; margin:22px 0; }
+h1 em { color:var(--gold); font-style:normal; }
+.hero-copy { color:#b8c0c9; font-size:15px; }
+.hero-button { display:inline-block; margin-top:24px; border:1px solid var(--gold); padding:11px 20px; color:var(--gold); font-size:13px; transition:.2s; }
+.hero-button:hover { background:var(--gold); color:var(--navy); }
+.hero-button span { margin-left:22px; }
+.hero-mark { position:absolute; right:13%; top:24%; font-family:serif; font-size:190px; color:rgba(197,166,107,.07); writing-mode:vertical-rl; }
+.exhibition-section { padding:85px 10% 100px; background:#f0ede6; color:#1b2736; }
+.section-heading { display:flex; justify-content:space-between; align-items:end; margin-bottom:34px; }
+.section-heading .eyebrow { color:#927447; }
+.section-heading h2 { font-size:32px; font-weight:500; margin:8px 0 0; }
+.section-heading > p { color:#68717b; font-size:13px; }
+.exhibit-grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:18px; }
+.exhibit-card { min-height:205px; text-align:left; border:1px solid #d8d2c7; background:#f8f6f1; padding:25px; cursor:pointer; color:#1b2736; position:relative; transition:.25s; }
+.exhibit-card:hover { transform:translateY(-4px); border-color:#a98b59; box-shadow:0 12px 25px #17263a14; }
+.card-number { color:#9c8257; font:12px Georgia,serif; letter-spacing:2px; }
+.card-symbol { position:absolute; right:24px; top:22px; font-size:36px; color:#b39563; opacity:.85; }
+.exhibit-card h3 { font-size:21px; font-weight:600; margin:25px 0 5px; }
+.exhibit-card p { margin:0; color:#69727c; font-size:13px; }
+.card-more { display:block; margin-top:18px; color:#927447; font-size:12px; }
+.about { padding:90px 12%; background:var(--navy2); }
+.about .eyebrow { margin-bottom:18px; }
+.about h2 { font-size:34px; line-height:1.4; font-weight:500; margin:0 0 20px; }
+.about > p:last-child { max-width:600px; color:#b8c0c9; font-size:14px; }
+footer { padding:24px 8%; display:flex; justify-content:space-between; color:#9ca5af; font-size:11px; letter-spacing:1px; }
+footer span:first-child { color:var(--gold); font-family:Georgia,serif; }
+.modal-backdrop { display:none; position:fixed; inset:0; z-index:10; background:#050b13c9; padding:24px; align-items:center; justify-content:center; }
+.modal-backdrop.open { display:flex; }
+.modal-panel { width:min(650px,100%); max-height:85vh; overflow:auto; position:relative; padding:45px; background:#f3f0e9; color:#202b39; border-top:4px solid var(--gold); box-shadow:0 20px 70px #0008; }
+.close-button { position:absolute; right:20px; top:12px; border:0; background:none; color:#263548; font-size:30px; cursor:pointer; }
+.modal-panel .eyebrow { color:#927447; }
+.modal-panel h2 { font-size:30px; margin:10px 0; }
+.modal-intro { color:#65707b; font-size:14px; }
+.modal-rule { height:1px; background:#d9d1c4; margin:26px 0; }
+.modal-panel h3 { color:#927447; font-size:14px; margin:22px 0 5px; }
+.modal-panel p:not(.eyebrow) { font-size:14px; }
+@media (max-width:650px) {
+  .site-header { padding:0 6%; } nav { gap:15px; font-size:12px; }
+  .hero { padding:80px 8%; min-height:480px; } .hero-mark { right:5%; font-size:130px; }
+  .exhibition-section { padding:65px 7%; } .section-heading { display:block; } .section-heading > p { margin-top:12px; }
+  .exhibit-grid { grid-template-columns:1fr; } .about { padding:70px 8%; }
+  .modal-panel { padding:36px 25px; } footer { padding:22px 6%; }
+}

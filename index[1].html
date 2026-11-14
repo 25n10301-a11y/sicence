@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="과학의 원리를 전시와 체험으로 만나는 온라인 과학 박물관">
+  <title>과학의 발견 — 온라인 과학 박물관</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="과학의 발견 홈">SCIENCE <span>MUSEUM</span></a>
+    <nav><a href="#exhibitions">전시관</a><a href="#about">박물관 소개</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">EXPLORE THE WORLD OF SCIENCE</p>
+      <h1>세상을 움직이는<br><em>과학의 원리</em>를 만나다</h1>
+      <p class="hero-copy">작은 호기심에서 시작해 우주의 거대한 원리까지.<br>전시를 선택하고 과학의 비밀을 탐험해 보세요.</p>
+      <a class="hero-button" href="#exhibitions">전시 둘러보기 <span>→</span></a>
+      <div class="hero-mark" aria-hidden="true">科学</div>
+    </section>
+
+    <section class="exhibition-section" id="exhibitions">
+      <div class="section-heading">
+        <div><p class="eyebrow">PERMANENT EXHIBITION</p><h2>상설 전시관</h2></div>
+        <p>전시물을 누르면 관련 과학 원리를<br>자세히 살펴볼 수 있습니다.</p>
+      </div>
+      <div class="exhibit-grid" id="exhibitGrid"></div>
+    </section>
+
+    <section class="about" id="about">
+      <p class="eyebrow">ABOUT THE MUSEUM</p>
+      <h2>질문하는 순간,<br>과학은 시작됩니다.</h2>
+      <p>과학의 발견은 일상 속 현상을 과학적 개념으로 이해하도록 돕는 온라인 박물관입니다. 각 전시에서는 핵심 개념과 원리, 생활 속 사례를 간결하게 소개합니다.</p>
+    </section>
+  </main>
+
+  <footer><span>SCIENCE MUSEUM</span><span>호기심으로 발견하는 과학</span></footer>
+
+  <div class="modal-backdrop" id="modal" aria-hidden="true">
+    <article class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-button" id="closeModal" aria-label="닫기">×</button>
+      <p class="eyebrow" id="modalCategory"></p>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-intro" id="modalIntro"></p>
+      <div class="modal-rule"></div>
+      <h3>과학 원리</h3>
+      <p id="modalPrinciple"></p>
+      <h3>생활 속에서 찾아보기</h3>
+      <p id="modalExample"></p>
+    </article>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
